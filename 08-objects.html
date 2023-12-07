@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+    <script>
+        /*const product = {
+            name : 'Deepesh',
+            age : 20,
+            city : undefined,
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.city);
+        console.log(product.age);
+
+        //DOT notation
+
+        product.name = 'Kumar';
+        console.log(product.name);
+
+        product.gender = 'male';
+        console.log(product);
+
+        delete product.city;
+        console.log(product);
+
+        //Bracket notation(we use the bracket notation because the dot notation cant do the function also the bracket notation do)
+        //console.log(product.deliver-time);  it is an error in dot notation 
+        
+        const product2 = {
+            study : {'10th' : 400,'12th' : 516},
+            fun : function area (){
+                console.log('Rengasamypatti');
+            }
+        };
+
+        console.log(product2['age']);
+        console.log(product2['deliver-time']);
+
+        product2.fun();
+
+        console.log(typeof Math.random);
+
+        //JSON Java Script Object Notation
+        //it convert the java script object into the JSON file
+        console.log(JSON.stringify(product2));
+
+        const json = JSON.stringify(product2);
+        
+        //convert the JSON file to the java script object
+        JSON.parse(json);*/
+
+        console.log('deepesh kumar'.length);
+        console.log('deepesh kumar'.toUpperCase());
+
+        //refernces in object
+        const pro1 = {
+            value : 'hi'
+        }
+
+        const pro2 = pro1;
+        const pro3 = {
+            value : 'hi'
+        }
+        //we can also change the value of the const in oblects
+        pro2.message = 'hello';
+        console.log(pro1);
+        console.log(pro2);
+        console.log(pro1 === pro2);
+        console.log(pro3 === pro2);
+        console.log(pro2.value === pro3.value);
+
+        //destructuring 
+        //const message = pro2.message;
+        const {message} = pro2;
+        console.log(message);
+    </script>
+</body>
+</html>
