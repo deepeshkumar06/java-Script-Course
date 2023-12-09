@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <button class="bu">
+        hello
+    </button>
+    <P>
+        hi hello , welcome!!
+    </P>
+    <script>
+       /*
+       //document.title = 'Hi';
+        //document.body.innerHTML = 'HELLO WELCOME';
+
+        console.log(document.title);
+        document.title = 'Changed';
+        console.log(document.title);
+
+        console.log(document.body);
+        console.log(document.body.innerHTML);
+
+        document.body.innerHTML = '<button>HI</button>';
+        console.log(document.body.innerHTML);
+        */
+
+        console.log(document.querySelector('button'));
+        console.log(document.querySelector('p'));
+
+        document.querySelector('button').innerHTML = 'HI';
+        document.querySelector('.bu').innerHTML = 'HI1';
+
+    </script>
+</body>
+</html>
