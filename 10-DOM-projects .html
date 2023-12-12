@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM project</title>
+    <style>
+        body{
+            font-family: Arial;
+        }
+        .subscribe-bu{
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        .is-subscribe{
+            border: none;
+            background-color: rgb(240, 240, 240);
+            color: black;
+            border-radius: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            cursor: pointer;
+        }
+        .cost-input{
+            font-size: 15px;
+            padding: 10px;
+        }
+        .cal{
+            padding: 13px;
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button class="js-subscribe-bu subscribe-bu" onclick="Subscribe()">
+    Subscribe</button><br><br><br>
+    <p>Rock Papper Scissors</p>
+    <a href="09-R-P-S.html">click here</a><br><br><br>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input type="text" placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="keyd(event);">
+        <button onclick="calculate();" class="cal">calculate</button>
+        <p class="js-tot-cost"></p>
+    <script>
+        console.log('30' / ' 10');
+
+        function calculate(){
+            const inputelement = document.querySelector('.js-cost-input');
+            let cost = Number(inputelement.value); //or we can use let cost = Number(inputelement.value);
+            //cost = JSON.parse(cost);
+            
+            if(cost<40){
+                cost += 10;
+            }
+            else{
+                cost = cost;
+            }
+            console.log(cost);
+            document.querySelector('.js-tot-cost').innerHTML = `Total Cost : $${cost}`;
+            }
+        function keyd(event){
+            console.log(event.key);
+            if(event.key === 'Enter'){
+                calculate();
+        }
+        }
+        function Subscribe(){
+            const buttonElement = document.querySelector('.js-subscribe-bu');
+
+        if(buttonElement.innerText === 'Subscribe'){
+            console.log('if');
+            buttonElement.innerHTML = 'Subscribed';
+            buttonElement.classList.add('is-subscribe');
+        }
+        else{
+            console.log('else');
+            buttonElement.innerHTML = 'Subscribe';
+            buttonElement.classList.remove('is-subscribe');
+        }
+        }
+    </script>
+</body>
+</html>
